@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Title="WebSolution" Logo="ExpressAppLogo">
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="10.2.4.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <DetailView Id="MyPerson_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" Caption="Main" ImageName="" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" Caption="SimpleEditors" ImageName="" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" RelativeSize="50">
+            <LayoutGroup Id="Person" ImageName="" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" RelativeSize="100" Direction="Vertical">
+              <LayoutGroup Id="Person_col1" Caption="Person_col1" ImageName="" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" RelativeSize="82">
+                <TabbedGroup Id="Item1" IsNewNode="True" CaptionLocation="Top" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" Index="0" RelativeSize="100">
+                  <LayoutGroup Id="Item2" IsNewNode="True" ShowCaption="True" Caption="Name" CaptionLocation="Top" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" Direction="Vertical" Index="0" RelativeSize="100">
+                    <LayoutItem Id="DisplayName" IsNewNode="True" ViewItem="DisplayName" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" Index="0" RelativeSize="23" />
+                    <LayoutItem Id="FirstName" IsNewNode="True" ViewItem="FirstName" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" Index="1" RelativeSize="17" />
+                    <LayoutItem Id="LastName" IsNewNode="True" ViewItem="LastName" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" Index="2" RelativeSize="17" />
+                    <LayoutItem Id="MiddleName" IsNewNode="True" ViewItem="MiddleName" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" Index="3" RelativeSize="17" />
+                    <LayoutItem Id="FullName" IsNewNode="True" ViewItem="FullName" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" Index="4" RelativeSize="23" />
+                  </LayoutGroup>
+                  <LayoutGroup Id="Item3" IsNewNode="True" ShowCaption="True" Caption="Info" CaptionLocation="Top" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" Direction="Vertical" Index="1" RelativeSize="100">
+                    <LayoutItem Id="Email" IsNewNode="True" ViewItem="Email" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" Index="0" RelativeSize="23" />
+                    <LayoutItem Id="Address1" IsNewNode="True" ViewItem="Address1" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" Index="1" RelativeSize="17" />
+                    <LayoutItem Id="Address2" IsNewNode="True" ViewItem="Address2" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" Index="2" RelativeSize="17" />
+                    <LayoutItem Id="Birthday" IsNewNode="True" ViewItem="Birthday" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" Index="3" RelativeSize="41" />
+                  </LayoutGroup>
+                  <LayoutGroup Id="Item4" IsNewNode="True" ShowCaption="True" Caption="Photo" CaptionLocation="Top" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" Direction="Vertical" Index="2" RelativeSize="100">
+                    <LayoutItem Id="Photo" IsNewNode="True" ViewItem="Photo" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" Index="0" RelativeSize="100" ShowCaption="False" />
+                  </LayoutGroup>
+                </TabbedGroup>
+                <LayoutItem Id="FirstName" Removed="True" ViewItem="FirstName" />
+                <LayoutItem Id="LastName" Removed="True" ViewItem="LastName" />
+                <LayoutItem Id="MiddleName" Removed="True" ViewItem="MiddleName" />
+              </LayoutGroup>
+              <LayoutGroup Id="Person_col2" Caption="Person_col2" ImageName="" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" RelativeSize="47" Direction="Horizontal" Removed="True">
+                <LayoutItem Id="Birthday" Removed="True" ViewItem="Birthday" />
+                <LayoutItem Id="Email" Removed="True" ViewItem="Email" />
+                <LayoutItem Id="FullName" Removed="True" ViewItem="FullName" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Party" Caption="Party" ImageName="" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" RelativeSize="39" Direction="Horizontal" Removed="True">
+              <LayoutItem Id="Address1" ViewItem="Address1" />
+              <LayoutItem Id="Address2" ViewItem="Address2" />
+              <LayoutItem Id="DisplayName" ViewItem="DisplayName" />
+              <LayoutItem Id="Photo" ViewItem="Photo" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" Index="1" RelativeSize="49">
+            <LayoutGroup Id="MyTasks" Caption="My Tasks" ImageName="BO_Task" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" RelativeSize="100">
+              <LayoutItem Id="MyTasks" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" RelativeSize="100" ViewItem="MyTasks" />
+            </LayoutGroup>
+            <LayoutGroup Id="PhoneNumbers" Caption="Phone Numbers" ImageName="BO_Phone" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" RelativeSize="100">
+              <LayoutItem Id="PhoneNumbers" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" RelativeSize="100" ViewItem="PhoneNumbers" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>
