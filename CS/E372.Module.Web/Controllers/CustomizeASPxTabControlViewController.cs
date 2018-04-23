@@ -1,0 +1,44 @@
+using System;
+using System.Web.UI;
+using System.Drawing;
+using DevExpress.ExpressApp;
+using DevExpress.ExpressApp.Model;
+using DevExpress.Web.ASPxTabControl;
+using DevExpress.ExpressApp.Web.Layout;
+
+namespace E372.Module.Web {
+    public partial class CustomizeASPxTabControlViewController : ViewController<DetailView> {
+        protected override void OnActivated() {
+            base.OnActivated();
+            ((WebLayoutManager)((DetailView)View).LayoutManager).ItemCreated += new EventHandler<ItemCreatedEventArgs>(CustomizeASPxTabControlViewController_ItemCreated);
+        }
+        private void CustomizeASPxTabControlViewController_ItemCreated(object sender, ItemCreatedEventArgs e) {
+            if (e.ModelLayoutElement is IModelTabbedGroup && e.TemplateContainer != null) {
+                e.TemplateContainer.Load += new EventHandler(TemplateContainer_Load);
+            }
+        }
+        private void TemplateContainer_Load(object sender, EventArgs e) {
+            Control control = (Control)sender;
+            control.Load -= new EventHandler(TemplateContainer_Load);
+            CustomizeASPxTabControl(FindFirstControl<ASPxTabControlBase>(control));
+        }
+        private T FindFirstControl<T>(Control parent) where T : Control {
+            foreach (Control control in parent.Controls) {
+                if (control is T)
+                    return (T)control;
+            }
+            foreach (Control control in parent.Controls)
+                return FindFirstControl<T>(control);
+            return null;
+        }
+        protected override void OnDeactivated() {
+            ((WebLayoutManager)((DetailView)View).LayoutManager).ItemCreated -= new EventHandler<ItemCreatedEventArgs>(CustomizeASPxTabControlViewController_ItemCreated);
+            base.OnDeactivated();
+        }
+        private static void CustomizeASPxTabControl(ASPxTabControlBase tabControl) {
+            tabControl.ActiveTabStyle.Border.BorderStyle = System.Web.UI.WebControls.BorderStyle.Solid;
+            tabControl.ActiveTabStyle.Border.BorderWidth = 5;
+            tabControl.ActiveTabStyle.Border.BorderColor = Color.Red;
+        }
+    }
+}

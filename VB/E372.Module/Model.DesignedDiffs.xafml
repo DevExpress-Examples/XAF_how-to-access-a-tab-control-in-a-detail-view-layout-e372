@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Title="E372" Logo="ExpressAppLogo">
+  <NavigationItems>
+    <Items>
+      <Item Id="@1b190025-c3b8-4567-8f0b-fed560f5f40a" Caption="Default" IsNewNode="True">
+        <Items IsNewNode="True">
+          <Item Id="@917ad95b-b1ed-4cdd-9cf6-0397b9e84bc9" ViewId="Person_DetailView" IsNewNode="True" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="11.2.7.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <DetailView Id="Person_DetailView" AllowEdit="True" AllowNew="False" AllowDelete="False">
+      <Layout>
+        <LayoutGroup Id="Main" Caption="Main" ImageName="" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" RelativeSize="100">
+          <LayoutGroup Id="Person" RelativeSize="23" ImageName="">
+            <LayoutGroup Id="Person_col1" RelativeSize="33" ImageName="">
+              <LayoutItem Id="FullName" RelativeSize="23" />
+              <LayoutItem Id="FirstName" RelativeSize="18" />
+              <LayoutItem Id="MiddleName" RelativeSize="18" />
+              <LayoutItem Id="LastName" RelativeSize="18" />
+              <LayoutItem Id="DisplayName" RelativeSize="22" />
+            </LayoutGroup>
+            <LayoutGroup Id="Person_col2" RelativeSize="66" ImageName="">
+              <LayoutItem Id="Email" Index="0" RelativeSize="23" />
+              <LayoutItem Id="Birthday" Index="1" RelativeSize="18" />
+              <LayoutItem Id="Address1" Index="2" RelativeSize="18" />
+              <LayoutItem Id="Address2" Index="3" RelativeSize="40" />
+            </LayoutGroup>
+            <LayoutItem Id="Photo" RelativeSize="33" Removed="True" />
+          </LayoutGroup>
+          <TabbedGroup Id="Item1" CaptionLocation="Top" Index="1" RelativeSize="76" IsNewNode="True">
+            <LayoutGroup Id="PhoneNumbers_Group" ShowCaption="True" Caption="Phone Numbers" Index="0" RelativeSize="100" IsNewNode="True">
+              <LayoutItem Id="PhoneNumbers" ViewItem="PhoneNumbers" Index="0" RelativeSize="100" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="Item2" ShowCaption="True" CaptionLocation="Top" Direction="Vertical" Index="1" RelativeSize="100" Caption="Test Tab Group" IsNewNode="True">
+              <LayoutItem Id="Photo" ShowCaption="False" ViewItem="Photo" Index="0" RelativeSize="100" IsNewNode="True" />
+            </LayoutGroup>
+          </TabbedGroup>
+          <LayoutGroup Id="PhoneNumbers_Group" Removed="True" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>
