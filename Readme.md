@@ -1,3 +1,8 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [CustomizeASPxTabControlViewController.cs](./CS/WebSolution.Module.Web/CustomizeASPxTabControlViewController.cs) (VB: [CustomizeASPxTabControlViewController.vb](./VB/WebSolution.Module.Web/CustomizeASPxTabControlViewController.vb))
+<!-- default file list end -->
 # How to access a tab control in a Detail View layout
 
 
